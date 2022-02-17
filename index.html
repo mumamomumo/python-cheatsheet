@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id='title'>Python documentation by Niven</h1>
+    <p>Code will be displayed <mark id='code'><code>like this</code></mark> and output will be displayed <mark
+            id='stdout'><code>Like this</code></mark></p>
+    <nav id='index'>
+        <!--Links to the parts of the webpage-->
+        <h2>Index</h2>
+        <ul>
+            <li><a href='#intro'>Introduction</a></li>
+            <li><a href='https://www.python.org/downloads/'>Install</a></li>
+            <li><a href='#Basics'>Basics</a></li>
+            <ul>
+                <li><a href='#print'>Print</a></li>
+                <li><a href='#Input'>Input</a></li>
+                <li><a href='#type'>Type</a></li>
+                <li><a href='#var'>Variable</a></li>
+                <li><a href='#operators'>Operators</a></li>
+                <li><a href='#loops'>Loops</a></li>
+                <li><a href='#if'>If statements</a></li>
+                <li><a href='#def'>Functions</a></li>
+                <li><a href='#class'>Classes</a></li>
+                <li><a href='#error'>Exception Handling</a></li>
+                <li><a href='#Iterators'>Iterator</a></li>
+
+            </ul>
+            <li><a href='#data_types'>Data Types</a>
+                <ul>
+                    <li><a href='#int'>Integer</a></li>
+                    <li><a href='#float'>Floating Point</a></li>
+                    <li><a href='#string'>String</a></li>
+                    <li><a href='#list'>List</a></li>
+                    <li><a href='#tuple'>Tuple</a></li>
+                    <li><a href='#set'>Set</a></li>
+                    <li><a href='#dict'>Dictionary</a></li>
+                    <li><a href='#bool'>Boolean</a></li>
+                </ul>
+            </li>
+
+
+
+    </nav>
+    <hr>
+    <div id="intro">
+        <h2>Introduction.</h2>
+        <p>This is a documentation page for the Python programming language. It is a good place to start if you're
+            new to Python or just want to learn more about the language.</p>
+        <p>This documentation is written by a community volunteer and is in no way endorsed by the Python
+            Foundation.</p>
+        <h3>Why learn python?</h3>
+        <p>Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes
+            code readability, and its syntax allows programmers to express concepts in fewer lines of code than would
+            be possible in languages such as C++ or Java. <br>
+            Python supports multiple programming paradigms, including object-oriented, imperative and functional.
+        </p>
+    </div>
+
+    <p id='note'>
+        I recommend following along with this tutorial so that you can get a hands-on experience with Python.
+    </p>
+    <hr>
+    <section id="Basics">
+        <h2>Basics</h2>
+        <!--The basic functions of python, such as print() and type()-->
+        <h3>Basic functions</h3>
+        <p id="note">
+            The <mark id="code"><code>-></code></mark> is to show what the function returns returns
+        </p>
+        <p>
+            <mark id='code'><code>print(<em>*args</em>) -> None</code></mark>
+            This function prints the given arguments to the console.
+        </p>
+        <p>
+            <mark id='code'><code>type(<em>*args</em>) -> type</code></mark>
+            This function returns the type of the given argument.
+        </p>
+        <p>
+            <mark id='code'><code>input(<em>str(prompt)</em>) -> str</code></mark>
+            This function returns the input from the user.
+        </p>
+        <p>
+            <mark id='code'><code>len(<em>str() or list()</em>) -> int</code></mark>
+            This function returns the length of the given argument.
+        </p>
+        <p>
+            <mark id='code'><code>range(<em>start, stop, step</em>) -> range</code></mark>
+            This function returns a list of numbers from the given start to the given end.
+        </p>
+        <span id='var'>
+            <h3 id='var'>Variables</h3>
+            <p>
+                Variables are used to store values. Variables are declared using the <mark
+                    id="code"><code>name = value</code></mark>
+                syntax.
+            </p>
+        </span>
+        <span id="operators">
+            <h3 id='operators'>Operators</h3>
+            <p>
+                Operators are used to perform operations on variables. Operators are declared using the <mark
+                    id="code"><code>operator</code></mark>
+                syntax.
+                <!--List of Python operators-->
+            <ul>
+                <li><a href="#math_operator_section">Math operations</a></li>
+                <ul>
+                    <li><a href="#operator_add">Addition: +</a></li>
+                    <li><a href="#operator_sub">Subtraction: - </a></li>
+                    <li><a href="#operator_mul">Multiplication: *</a></li>
+                    <li><a href="#operator_div">Division: /</a></li>
+                    <li></li><a href="#operator_mod">Modulus: %</a></li>
+                    <li><a href="#operator_pow">Exponent: **</a></li>
+                    <li><a href="#operator_fdiv">Floor Division: //</a></li>
+                </ul>
+                <li>Binary</li>
+                <ul>
+                    <li>Bitwise AND: &</li>
+                    <li>Bitwise OR: |</li>
+                    <li>Bitwise XOR: ^</li>
+                    <li>Bitwise NOT: ~</li>
+                </ul>
+                <li>Comparison/Boolean operations</li>
+                <ul>
+                    <li>Logical AND: and</li>
+                    <li>Logical OR: or</li>
+                    <li>Logical NOT: not</li>
+                    <li>Comparison: ==</li>
+                    <li>Less than: &lt;</li>
+                    <li>Less than or equal to:&lt;= </li>
+                    <li>Greater than: &gt;</li>
+                    <li>Greater than or equal to: &gt;=</li>
+                </ul>
+                <li>Variable handling</li>
+                <ul>
+                    <li>Assignment: =</li>
+                    <li>Addition assignment: +=</li>
+                    <li>Subtraction assignment: -=</li>
+                    <li>Multiplication assignment: *=</li>
+                    <li>Division assignment: /=</li>
+                    <li>Modulus assignment: %=</li>
+                    <li>Exponent assignment: **=</li>
+                    <li>Bitwise AND assignment: &=</li>
+                    <li>Bitwise OR assignment: |=</li>
+                    <li>Bitwise XOR assignment: ^=</li>
+                </ul>
+            </ul>
+            </p>
+        </span>
+        <span id="loops">
+            <h3 id="loops">Loops</h3>
+            <p>
+                Loops are used to repeat a block of code. Loops are declared using the <mark
+                    id="code"><code>for</code></mark>
+                syntax or the <mark id="code"><code>while</code></mark> syntax.
+            </p>
+            <!--Types of loops and it's syntax-->
+            <h4>For Loop</h4>
+            <p>
+                The <mark id="code"><code>for var in condition:</code></mark> loop is used to iterate over a sequence.
+            </p>
+            <h4>While Loop</h4>
+            <p>
+                The <mark id="code"><code>while condition:</code></mark> loop is used to iterate over a sequence until a
+                condition is met.
+            </p>
+        </span>
+        <span id="if">
+            <h3 id="if">Conditional Statements</h3>
+            <p>
+                Conditional statements are used to execute different code based on a condition. Conditional statements
+                are
+                declared using the <mark id="code"><code>if</code></mark> syntax.
+            </p>
+            <h4>If Statement</h4>
+            <p>
+                The <mark id="code"><code>if condition:</code></mark> statement is used to execute different code based
+                on a
+                condition. If the condition is true, the code in the if statement is executed.
+            </p>
+            <h4>Else Statement</h4>
+            <p>
+                The <mark id="code"><code>else:</code></mark> statement is used to execute different code if the
+                condition
+                is not met.
+            </p>
+            <h4>Elif Statement</h4>
+            <p>
+                The <mark id="code"><code>elif condition2:</code></mark> statement is used to execute different code
+                based
+                on a different condition if the condition in the if statement is not met.
+            </p>
+            <h4>Nested If Statements</h4>
+            <p>
+                The <mark id="code"><code>if</code></mark> statement can be nested inside of another <mark
+                    id="code"><code>if</code></mark>
+                statement.
+            </p>
+        </span>
+        <span id="def">
+            <h3 id="def">Functions</h3>
+            <p>
+                Functions are used to group code together. Functions are declared using the <mark
+                    id="code"><code>def funcName(arguments):</code></mark>
+                syntax.
+            </p>
+            <h4>Return Statement</h4>
+            <p>
+                The <mark id="code"><code>return value</code></mark> statement is used to return a value from a
+                function.
+            </p>
+            <h4>Arguments</h4>
+            <p>
+                Arguments are used to pass values into a function. Arguments are declared using the <mark
+                    id="code"><code>funcName(argument)</code></mark>
+                syntax.
+            </p>
+            <h4>Keyword Arguments</h4>
+            <p>
+                <a href='https://stackoverflow.com/questions/1419046/normal-arguments-vs-keyword-arguments'>Keyword
+                    arguments</a> are used to pass values into a function. Keyword arguments are declared using the
+                <mark id="code"><code>funcName(**keyword)</code></mark>
+                syntax.
+            </p>
+            <h4>Default Arguments</h4>
+            <p>
+                Default arguments are used to pass default values into a function. Default arguments are declared using
+                the
+                <mark id="code"><code>funcName(argument = value)</code></mark>
+                syntax.
+            </p>
+            <h4>Variable Length Arguments</h4>
+            <p>
+                Variable length arguments are used to pass values into a function. Variable length arguments are
+                declared
+                using the <mark id="code"><code>*args</code></mark>
+                syntax.
+            </p>
+            <h4>Keyword Variable Length Arguments</h4>
+            <p>
+                Keyword variable length arguments are used to pass values into a function. Keyword variable length
+                arguments
+                are declared using the <mark id="code"><code>**kwargs</code></mark>
+                syntax.
+            </p>
+        </span>
+        <span id="classes">
+            <h3 id="class">Classes</h3>
+            <p>
+                Classes are used to group variables together. Classes are declared using the <mark
+                    id="code"><code>class ClassName():</code></mark>
+                syntax.
+            </p>
+            <h4>__init__</h4>
+            <p>
+                The <mark id="code"><code>__init__</code></mark> function is used to initialize a class, giving it all
+                its
+                variables.
+            </p>
+            <h4>Inheritance</h4>
+            <p>
+                Inheritance is used to create a new class based on an existing class. Inheritance is declared using the
+                <mark id="code"><code>class ClassName(ParentClass):</code></mark>
+                syntax.
+            </p>
+            <h4>Instance Variables</h4>
+            <p>
+                Instance variables are used to store values. Instance variables are declared using the <mark
+                    id="code"><code>self.variableName = value</code></mark>
+                syntax.
+            </p>
+            <h4>Instances</h4>
+            <p>
+                Instances are used to create objects. Instances are declared using the <mark
+                    id="code"><code>objectName = ClassName()</code></mark>
+                syntax.
+            </p>
+            <h4>Self</h4>
+            <p>
+                The <mark id="code"><code>self</code></mark> keyword is used to refer to the current instance of a
+                class.
+            </p>
+            <h4>Static Variables</h4>
+            <p>
+                Static variables are used to store values. Static variables are declared using the <mark
+                    id="code"><code>ClassName.variableName = value</code></mark>
+                syntax.
+            </p>
+            <h4>Static Methods</h4>
+            <p>
+                Static methods are used to group code together. Static methods are declared using the <mark
+                    id="code"><code><br>@staticmethod<br>def methodName():<br></code></mark>
+                syntax. Static methods are called by running <mark id="code"><code>ClassName.methodName()</code></mark>
+            </p>
+            <h4>Instance Methods</h4>
+            <p>
+                Instance methods are used to group code together. Instance methods are declared using the <mark
+                    id="code"><code>def methodName(self):</code></mark>
+                syntax. Instance methods can be called by using the <mark
+                    id="code"><code> objectName.methodName()</code></mark> syntax.
+            </p>
+        </span>
+        <span id="error">
+            <h3 id="error">Exceptions</h3>
+            <p>
+                Exceptions are used to handle errors. Exceptions are declared using the <mark
+                    id="code"><code>try:</code></mark>
+                syntax. The code in the <mark id="code"><code>try:</code></mark> will run
+            </p>
+            <h4>Raising Exceptions</h4>
+            <p>
+                The <mark id="code"><code>raise</code></mark> keyword is used to raise an exception.
+            </p>
+            <h4>Exception Handling</h4>
+            <p>
+                The <mark id="code"><code>except:</code></mark> keyword is used to handle an exception that is raised
+                from
+                the code in <mark id="code"><code>try:</code></mark>.
+            </p>
+            <h4>else</h4>
+            <p>
+                The <mark id="code"><code>else:</code></mark> keyword is used to execute different code if an exception
+                is
+                not raised.
+            <h4>Finally</h4>
+            <p>
+                The <mark id="code"><code>finally:</code></mark> keyword is used to execute code after an exception has
+                been
+                handled.
+            </p>
+        </span>
+        <span id="Iterators">
+            <h3 id="Iterators">Iterators</h3>
+            <p>
+                Iterators are used to iterate through a list of values. Iterators are declared using the <mark
+                    id="code"><code>for value in list:</code></mark>
+                syntax.
+            </p>
+        </span>
+    </section>
+    <hr>
+    <section id='data_types'>
+        <h2>Data types</h2>
+        <article id="int" class='Integers'>
+            <h3 class='Integers'>Integers</h3>
+            <p class='Integers'>
+                Integers are whole numbers.
+                They are the most basic type of data in Python.
+            </p>
+            <p>
+                An example of an integer is, simply, '1'.
+                <!--Describe what an integer is-->
+                An integer is any whole number without any decimal points. This excludes 1.0, which is a floating point
+                number. When defining a variable with a value of an integer, you do not need any quotations or brackets.
+                It will make it another data type.
+            </p>
+            <br>
+            <div class="ino">
+                <p>
+                    The statement below will give an output of '1'<br>
+
+                </p>
+                <p>
+                    <mark id="code"><code>print(1)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>1</code></mark>
+                </p>
+                <br>
+                <p>
+                    The next statement here will print the data type of one.
+                </p>
+                <p>
+                    <mark id="code"><code>print(type(1))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'int' &gt;</code></mark><br><br>
+                    As we can see here, the number 1 is an integer.
+                </p>
+                <p>
+                    The same output will be printed if we give another whole number. However, if we try a number with a
+                    decimal point or with quotes, it will not be an integer.
+                </p>
+                <p>
+                    <mark id="code"><code>print(type(1.0))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'float' &gt;</code></mark><br><br>
+                    As we can see here, the number 1.0 is a floating point number. <br>
+                    To turn a float into an int, we have to call the <mark
+                        id="code"><code>int(<em>floatNumber</em>)</code></mark> function. This will remove all the
+                    leading digits after the decimal point and give only the whole number
+                </p>
+                <p>
+                    If we write the number in quotes, it will be a string.
+                </p>
+                <p>
+                    <mark id="code"><code>print(type("1"))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'str' &gt;</code></mark><br><br>
+                    As we can see here, the number 1 is a string as it is wrapped in quotes.
+                </p>
+            </div>
+        </article>
+        <article id="float">
+            <h3 class="floats">Floats</h3>
+            <p class="floats">
+                Floats are numbers with a decimal point.
+                They are used to represent real numbers.
+            </p>
+            <p>
+                An example of a float is, simply, '1.0'.
+                <!--Describe what a float is-->
+                A float is any number with a decimal point. This includes 1.0, which is an integer. When defining a
+                variable with a value of a float, you do not need any quotations or brackets. It will make it another
+                data type.
+            </p>
+            <br>
+            <div class="ino">
+                <p>
+                    The statement below will give an output of '1.0'<br>
+                </p>
+                <p>
+                    <mark id="code"><code>print(1.0)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>1.0</code></mark>
+                </p>
+                <br>
+                <p>
+                    The next statement here will print the data type of 1.0.
+                </p>
+                <p>
+                    <mark id="code"><code>print(type(1.0))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'float' &gt;</code></mark><br><br>
+                    As we can see here, the number 1.0 is a float.
+                </p>
+                <p>
+                    The same output will be printed if we give another whole number. However, if we try a number with a
+                    decimal point or with quotes, it will not be an integer.
+                </p>
+                <p>
+                    <mark id="code"><code>print(type(1))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'int' &gt;</code></mark><br><br>
+                    As we can
+                    see here, the number 1 is an integer.
+                    We can turn this number into a float by using the <mark id="code"><code>float()</code></mark>
+                    function
+                </p>
+                <p>
+                    The following will give an output of 1.0<br>
+                    <mark id="code"><code>print(float(1))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>1.0</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="string">
+            <h3 class="string">String</h3>
+            <p class="string">
+                Strings are used to represent text.
+                They are used to store words, sentences, or any other text.
+            </p>
+            <p>
+                An example of a string is, simply, 'Hello World'.
+                <!--Describe what a string is-->
+                A string is any text that is wrapped in quotes. When defining a variable with a value of a string, you
+                do not need any brackets. It will make it another data type.
+            </p>
+            <br>
+            <div class="ino">
+                <p>
+                    The statement below will give an output of 'Hello World'<br>
+                </p>
+                <p>
+                    <mark id="code"><code>print("Hello World")</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>Hello World</code></mark>
+                </p>
+                <br>
+                <p>
+                    The next statement here will print the data type of 'Hello World'.
+                </p>
+                <p>
+                    <mark id="code"><code>print(type("Hello World"))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'str' &gt;</code></mark><br><br>
+                    As we can see here, the string 'Hello World' is a string.
+                </p>
+                <p>
+                    A string is any thing that is encased in quotes
+                </p>
+                <p>
+                    The following will tell us the data type of '1', and '1.0<br>
+                    <mark id="code"><code>print(type('1'), type('1.0'))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'str' &gt; &lt;class 'str' &gt;</code></mark><br><br>
+                    As we can see here, the string '1' and '1.0' are strings.
+                </p>
+            </div>
+        </article>
+        <article id='list'>
+            <h3 class="list">List</h3>
+            <p class="list">
+                Lists are used to store multiple values in one variable.
+                They are used to store a list of values.
+            </p>
+            <p>
+                An example of a list is [1, 2, 3].
+                <!--Describe what a list is-->
+                A list is a list of values, of any data type. When defining a variable with a value of a list, you do
+                not need any
+                brackets. It will make it another data type.
+            </p>
+            <br>
+            <div class="ino">
+                <p>
+                    The statement below will give an output of [1, 2, 3]<br>
+                </p>
+                <p>
+                    <mark id="code"><code>print([1, 2, 3])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 3]</code></mark>
+                </p>
+                <br>
+                <p>
+                    The next statement here will print the data type of [1, 2, 3].
+                </p>
+                <p>
+                    <mark id="code"><code>print(type([1, 2, 3]))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'list'&gt;</code></mark><br><br>
+                    As we can see here, the list [1, 2, 3] is a list.
+                </p>
+                <p>
+                    The following will tell us the data type of [1, 2, 3], and [1, 2, 3.0]<br>
+                    <mark id="code"><code>print(type([1, 2, 3]), type([1, 2, 3.0]))</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'list' &gt; &lt;class 'list' &gt;</code></mark><br><br>
+                    As we can see here, the list [1, 2, 3] and [1, 2, 3.0] are lists.
+                </p>
+                <p>
+                    Each of the values in a list have an index. The indexes start from 0.
+                    To access an element in a list, you have to do <mark id="code"><code>list[index]</code></mark>
+                </p>
+                <p>
+                    The following will tell us the value of the first element in the list a<br>
+                    <mark id="code"><code>a = [1, 2, 3] <br>print(a[0])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>1</code></mark>
+                </p>
+                <p>
+                    The following will tell us the value of the second element in the list a<br>
+                    <mark id="code"><code>a = [1, 2, 3] <br>print(a[1])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>2</code></mark>
+                </p>
+                <p>
+                    The following will tell us the value of the third element in the list a<br>
+                    <mark id="code"><code>a = [1, 2, 3] <br>print(a[2])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>3</code></mark>
+                </p>
+                <p>
+                    The following will tell us the value of the fourth element in the list a<br>
+                    <mark id="code"><code>a = [1, 2, 3] <br>print(a[3])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>IndexError: list index out of range</code></mark>
+                </p>
+                <p>
+                    The following will tell us the value of the last element in the list a<br>
+                    <mark id="code"><code>a = [1, 2, 3] <br>print(a[-1])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>3</code></mark>
+                </p>
+                <p>
+                    The following will print the values at every 2 indexes<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>print(a[::2])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 3, 5, 7, 9]</code></mark>
+                </p>
+                <p>
+                    The following will print the values between index 2 and index 6<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>print(a[2:6])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[3, 4, 5, 6]</code></mark>
+                </p>
+                <p>
+                    The following with print values at ever 2nd index between index 2 and index 6<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>print(a[2:6:2])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[3, 5]</code></mark>
+                </p>
+                <p>
+                    The following will print out the values of a list individually using iteration<br>
+                    <mark
+                        id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>for i in a: <br>&nbsp;&nbsp;&nbsp; print(i)</code></mark>
+                </p>
+                <p>
+                    The following will add a value to the list<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>a.append(11)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</code></mark>
+                </p>
+                <p>
+                    The following will add a value to the list at the index specified<br>
+                    <mark
+                        id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>a.insert(2, 11)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 11, 3, 4, 5, 6, 7, 8, 9, 10]</code></mark>
+                </p>
+                <p>
+                    The following will remove the last value from the list<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>a.pop()<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></mark>
+                </p>
+                <p>
+                    The following will remove the value at the index specified<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>a.pop(2)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 4, 5, 6, 7, 8, 9]</code></mark>
+                </p>
+                <p>
+                    The following will remove the value given<br>
+                    <mark id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>a.remove(3)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 4, 5, 6, 7, 8, 9]</code></mark>
+                </p>
+                <p>
+                    The following will remove the value given and only remove the first instance of the value<br>
+                    <mark id="code"><code>a = [1, 2, 3, 3, 4, 5, 6, 7, 8, 9] <br>a.remove(3)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></mark>
+                </p>
+                <p>
+                    The following is a nested list
+                    <mark
+                        id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>b = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19] <br>c = [a, b] <br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>[[1, 2, 3, 4, 5, 6, 7, 8, 9], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]]</code></mark>
+                </p>
+                <p>
+                    The following will get a value of the first value of the second nested list
+                    <mark
+                        id="code"><code>a = [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>b = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19] <br>c = [a, b] <br>print(c[1][0])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>10</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="tuple">
+            <h3>Tuple</h3>
+            <p>
+                Tuples are similar to lists, but they are immutable. Tuples are used when you want to store a list of
+                values that you do not want to change.
+            </p>
+            <p>
+                Tuples are created by using the parenthesis () and separating the values with a comma.
+            </p>
+            <div class="ino">
+                <p>
+                    The following will create a tuple with 3 values<br>
+                    <mark id="code"><code>a = (1, 2, 3)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>(1, 2, 3)</code></mark>
+                </p>
+                <p>
+                    The following will add an item to a tuple<br>
+                    <mark id="code"><code>a = (1, 2, 3)<br>a = a + (4,)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>(1, 2, 3, 4)</code></mark>
+                </p>
+                <p>
+                    the following will add an item to a tupple using append()<br>
+                    <mark id="code"><code>a = (1, 2, 3)<br>a.append(4)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>AttributeError: 'tuple' object has no attribute 'append'</code></mark>
+                </p>
+                <p>
+                    The following will remove an item from a tuple<br>
+                    <mark id="code"><code>a = (1, 2, 3)<br>a.remove(2)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>(1, 3)</code></mark>
+                </p>
+                <h4>Why use tuples over lists</h4>
+                <p>
+                    Tuples are faster than lists. Lists are mutable, while tuples are immutable.
+                </p>
+                <p>
+                    Tuples are used when you want to store a list of values that you do not want to change.
+                </p>
+            </div>
+        </article>
+        <article id="set">
+            <h3>Set</h3>
+            <p>
+                Sets are similar to lists, but they are unordered. Sets are used when you want to store a list of values
+                that you do not want to change.
+            </p>
+            <p>
+                Sets are created by using the curly brackets {} and separating the values with a comma.
+            </p>
+            <div class="ino">
+                <p>
+                    The following will create a set with 3 values<br>
+                    <mark id="code"><code>a = {1, 2, 3}<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1, 2, 3}</code></mark>
+                </p>
+                <p>
+                    The following will add an item to a set<br>
+                    <mark id="code"><code>a = {1, 2, 3}<br>a.add(4)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1, 2, 3, 4}</code></mark>
+                </p>
+                <p>
+                    The following will remove an item from a set<br>
+                    <mark id="code"><code>a = {1, 2, 3}<br>a.remove(2)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1, 3}</code></mark>
+                </p>
+                <p>
+                    The following will remove an item from a set using discard()<br>
+                    <mark id="code"><code>a = {1, 2, 3}<br>a.discard(2)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1, 3}</code></mark>
+                </p>
+                <h4>Why use sets over other array types</h4>
+                <ul>
+                    <li>Sets automatically order the values in it</li>
+                    <li>Sets remove duplicates</li>
+                </ul>
+                <p id="note">
+                    <mark id="code"><code>a = {}<br>print(type(a))</code></mark><br>
+                    The data type of variable a is a dictionary
+                </p>
+                <p id='note'>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'dict&gt;</code></mark>
+                </p>
+                <p id="note">
+                    To create an empty set, you will have to use the <code>set()</code> function.
+                </p>
+                <p id="note">
+                    <mark id="code"><code>a = set()<br>print(type(a))</code></mark><br>
+                    The data type of a is a set
+                </p>
+                <p id='note'>
+                    Output: <br><br>
+                    <mark id="stdout"><code>&lt;class 'set&gt;</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id='dict'>
+            <h3>Dictionary</h3>
+            <p>
+                Dictionaries are similar to lists, but they are unordered. Dictionaries are used when you want to give
+                custom indexes to a value. Dictionaries are made up for keys and values.
+            </p>
+            <p>
+                Dictionaries are created by using the curly brackets {key: value} and separating the key:values with a
+                comma.
+            </p>
+            <div class="ino">
+                <p>
+                    The following will create a dictionary with 3 values<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1: 1, 2: 2, 3: 3}</code></mark>
+                </p>
+                <p>
+                    The following will add an item to a dictionary<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>a[4] = 4<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1: 1, 2: 2, 3: 3, 4: 4}</code></mark>
+                </p>
+                <p>
+                    The following will remove an item from a dictionary<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>del a[2]<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1: 1, 3: 3}</code></mark>
+                </p>
+                <p>
+                    The following will remove an item from a dictionary using pop()<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>a.pop(2)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{1: 1, 3: 3}</code></mark>
+                </p>
+                <p>
+                    The following will remove an item from a dictionary using popitem()<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>a.popitem()<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>{2: 2, 3: 3}</code></mark>
+                </p>
+                <p>
+                    The following will attempt to remove a key in a dictionary that isn't in the dictionary<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>a.pop(4)<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>KeyError: 4</code></mark>
+                </p>
+                <p>
+                    The following will get the key given the value of the key<br>
+                    <mark id="code"><code>a = {1: 1, 2: 2, 3: 3}<br>print(a[2])</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>2</code></mark>
+                </p>
+        </article>
+        <article id="bool">
+            <h3>Boolean</h3>
+            <p>
+                Booleans are used to store true or false values.
+            </p>
+            <div class="ino">
+                <p>
+                    The following will create a boolean<br>
+                    <mark id="code"><code>a = True<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>True</code></mark>
+                </p>
+                <p>
+                    The following will create a boolean<br>
+                    <mark id="code"><code>a = False<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>False</code></mark>
+                </p>
+                <p>
+                    The following will create a boolean<br>
+                    <mark id="code"><code>a = bool()<br>print(a)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>False</code></mark>
+                </p>
+                <p>
+                    <mark id="code"><code>if</code></mark> statements will one run if the condition given equates to
+                    true. For example,<br>
+                </p>
+                <p>
+                    <mark id="code"><code>a = True<br>if a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("a is true")</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>a is true</code></mark>
+                </p>
+                <p>
+                    Or,
+                </p>
+                <p>
+                    <mark
+                        id="code"><code>a = 1<br>if a == 1:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("a is storing the value 1")</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>a is storing the value 1</code></mark>
+                </p>
+            </div>
+        </article>
+    </section>
+    <section id="math_operator_section">
+        <h2>Operators</h2>
+        <article id="operator_add">
+            <h3>Addition</h3>
+            <p>
+                This operator adds 2 values together
+            </p>
+            <div class="ino">
+                <p>
+                    The following will add two numbers together<br>
+                    <mark id="code"><code>a = 1<br>b = 2<br>c = a + b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>3</code></mark>
+                </p>
+                <p>
+                    The following will add two strings together<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a + b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>HelloWorld</code></mark>
+                </p>
+                <p>
+                    The following will add two strings together<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a + " " + b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>Hello World</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="operator_sub">
+            <h3>Subtraction</h3>
+
+            <p>
+                This operator subtracts 2 values together
+            </p>
+            <div class="ino">
+                <p>
+
+                    The following will subtract two numbers<br>
+                    <mark id="code"><code>a = 1<br>b = 2<br>c = a - b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>-1</code></mark>
+                </p>
+                <p>
+                    The following will subtract two strings<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a - b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>TypeError: unsupported operand type(s) for -: 'str' and 'str'</code></mark>
+                </p>
+                <p>
+                    The following will subtract two lists<br>
+                    <mark id="code"><code>a = [1, 2, 3]<br>b = [4, 5, 6]<br>c = a - b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>TypeError: unsupported operand type(s) for -: 'list' and 'list'</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="operator_mul">
+            <h3>Multiplication</h3>
+
+            <p>
+                This operator multiplies 2 values together
+            </p>
+            <div class="ino">
+                <p>
+                    The following will multiply two numbers<br>
+                    <mark id="code"><code>a = 1<br>b = 2<br>c = a * b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>2</code></mark>
+                </p>
+                <p>
+                    The following will multiply two strings<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a * b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>TypeError: can't multiply sequence by non-int of type 'str'</code></mark>
+                </p>
+                <p>
+                    The following will multiply two lists<br>
+                    <mark id="code"><code>a = [1, 2, 3]<br>b = [4, 5, 6]<br>c = a * b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>TypeError: can't multiply sequence by non-int of type 'list'</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="operator_div">
+            <h3>Division</h3>
+
+            <p>
+                This operator divides 2 values together
+            </p>
+            <div class="ino">
+                <p>
+                    The following will divide two numbers<br>
+                    <mark id="code"><code>a = 1<br>b = 2<br>c = a / b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>0.5</code></mark>
+                </p>
+                <p>
+                    The following will divide two strings<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a / b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>TypeError: unsupported operand type(s) for /: 'str' and 'str'</code></mark>
+                </p>
+                <p>
+                    The following will divide two lists<br>
+                    <mark id="code"><code>a = [1, 2, 3]<br>b = [4, 5, 6]<br>c = a / b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>TypeError: unsupported operand type(s) for /: 'list' and 'list'</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="operator_mod">
+            <h3>Modulus</h3>
+
+            <p>
+                This operator returns the remainder of 2 values
+            </p>
+            <div class="ino">
+                <p>
+                    The following will return the remainder of two numbers<br>
+                    <mark id="code"><code>a = 1<br>b = 3<br>c = a % b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>2</code></mark>
+                </p>
+                <p>
+                    The following will return the remainder of two strings<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a % b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>TypeError: unsupported operand type(s) for %: 'str' and 'str'</code></mark>
+                </p>
+                <p>
+                    The following will return the remainder of two lists<br>
+                    <mark id="code"><code>a = [1, 2, 3]<br>b = [4, 5, 6]<br>c = a % b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>TypeError: unsupported operand type(s) for %: 'list' and 'list'</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="operator_pow">
+            <h3>Power</h3>
+
+            <p>
+                This operator returns the power of 2 values
+            </p>
+            <div class="ino">
+                <p>
+                    The following will return the power of two numbers<br>
+                    <mark id="code"><code>a = 1<br>b = 3<br>c = a ** b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>1</code></mark>
+                </p>
+                <p>
+                    The following will return the power of two strings<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a ** b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'str'</code></mark>
+                </p>
+                <p>
+                    The following will return the power of two lists<br>
+                    <mark id="code"><code>a = [1, 2, 3]<br>b = [4, 5, 6]<br>c = a ** b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>TypeError: unsupported operand type(s) for ** or pow(): 'list' and 'list'</code></mark>
+                </p>
+            </div>
+        </article>
+        <article id="operator_fdiv">
+            <h3>
+                Floor Division
+            </h3>
+            <p>
+                This operator divdes 2 values and returns only the integral part of the result
+            </p>
+            <div class="ino">
+                <p>
+                    The following will return the floor division of two numbers<br>
+                    <mark id="code"><code>a = 1<br>b = 3<br>c = a // b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>0</code></mark>
+                </p>
+                <p>
+                    The following will return the floor division of two strings<br>
+                    <mark id="code"><code>a = "Hello"<br>b = "World"<br>c = a // b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark id="stdout"><code>TypeError: unsupported operand type(s) for //: 'str' and 'str'</code></mark>
+                </p>
+                <p>
+                    The following will return the floor division of two lists<br>
+                    <mark id="code"><code>a = [1, 2, 3]<br>b = [4, 5, 6]<br>c = a // b<br>print(c)</code></mark>
+                </p>
+                <p>
+                    Output: <br><br>
+                    <mark
+                        id="stdout"><code>TypeError: unsupported operand type(s) for //: 'list' and 'list'</code></mark>
+                </p>
+            </div>
+        </article>
+    </section>
+
+</body>
+</html>
